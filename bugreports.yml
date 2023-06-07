@@ -7,6 +7,6 @@
     1. Открыть DevTools
     2. В устройствах выбрать любое мобильное устройство
   expected-result: |
-    Всё плохо
-  actual-result: |
     Всё хорошо
+  actual-result: |
+    Всё плохо
