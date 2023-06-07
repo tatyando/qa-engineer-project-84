@@ -1,0 +1,11 @@
+---
+test-cases:
+  - summary: |
+      Добавление товара в корзину с главной страницы
+    status: pass
+
+  - summary: |
+      Переход на страницу товара
+    status: pass
+
+bugreports: []
