@@ -8,4 +8,47 @@ test-cases:
       Переход на страницу товара
     status: pass
 
-bugreports: []
+- summary: |
+      Очистка корзины
+    status: pass
+
+- summary: |
+      Удаление товара из корзины
+    status: pass
+
+- summary: |
+      Фильтрация товаров по хештегу
+    status: pass
+
+- summary: |
+      Фильтрация товаров по бренду
+    status: fail
+
+- summary: |
+      Фильтрация товаров по цене
+    status: fail
+
+bugreports:
+  - summary: |
+      Скукоживается карточка товара при фильтрации по бренду
+    environment: |
+      https://hexlet-products-store.vercel.app/, Chrome 114
+    steps-to-reproduce: |
+      1. Открыть главную страницу
+      2. Выбрать любой бренд, товары которого есть в наличии. Лучше OPPO, там сильно заметно
+    expected-result: |
+      Отображаются товары в соответствии с заданным фильтром
+    actual-result: |
+      Товары отображаются, но карточка товара скукожилась
+
+  - summary: |
+      Кнопка Очистить корзину не удаляет товары из корзины
+    environment: |
+      https://hexlet-products-store.vercel.app/, Chrome 114
+    steps-to-reproduce: |
+      1. Добавить 1 или более товаров в корзину
+      2. Нажать на кнопку Очистить корзину
+    expected-result: |
+      Из корзины удалены все товары, товары не отображаются в ней при дальнейшей работе с приложением
+    actual-result: |
+      При переходе из корзины на главную, все товары возвращаются в корзину
