@@ -6,3 +6,23 @@
 - summary: |
     Переход на страницу товара
   status: pass
+
+- summary: |
+    Очистка корзины
+  status: pass
+
+- summary: |
+    Удаление товара из корзины
+  status: pass
+
+- summary: |
+    Фильтрация товаров по хештегу
+  status: fail
+
+- summary: |
+    Фильтрация товаров по бренду
+  status: pass
+
+- summary: |
+    Фильтрация товаров по цене
+  status: fail
